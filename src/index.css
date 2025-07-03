@@ -7,13 +7,34 @@
     --color-secondary: #ff6015;
     --color-textPrimary: #333333;
     --color-textSecondary: #666666;
-    --color-hoverColor: #C5AC60;
-    --font-poppins: Poppins, sans-serif; 
+    --font-poppins: Poppins, sans-serif;
     --animate-scroll: scroll var(--animation-duration, 60s) var(--animation-direction, forwards) linear infinite;
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 
     @keyframes scroll {
         to {
             transform: translate(calc(-50% - 0.5rem));
+        }
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+
+    @keyframes marquee-vertical {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(calc(-100% - var(--gap)));
         }
     }
 

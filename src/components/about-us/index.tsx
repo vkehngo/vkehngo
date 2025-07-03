@@ -1,3 +1,5 @@
+import { NumberTicker } from "../ui/NumberTicker";
+
 const AboutUs = () => {
     return (
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
@@ -29,13 +31,23 @@ const AboutUs = () => {
                         <div className="w-full flex-col justify-center items-start gap-6 flex">
                             <div className="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                 <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex-col justify-start items-start gap-1 inline-flex">
-                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">45+</h4>
+                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                        <NumberTicker
+                                            value={45}
+                                            className=""
+                                        />
+                                        +
+                                    </h4>
                                     <p className="text-textSecondary text-base font-normal leading-relaxed">
                                         Happy Donators
                                     </p>
                                 </div>
                                 <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex-col justify-start items-start gap-1 inline-flex">
-                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">455+</h4>
+                                    <h4 className="text-textPrimary text-2xl font-bold leading-9"> <NumberTicker
+                                        value={455}
+                                        className=""
+                                    />
+                                        +</h4>
                                     <p className="text-textSecondary text-base font-normal leading-relaxed">
                                         Volunteer
                                     </p>
@@ -43,13 +55,25 @@ const AboutUs = () => {
                             </div>
                             <div className="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                 <div className="w-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex-col justify-start items-start gap-1 inline-flex">
-                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">220K</h4>
+                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                        <NumberTicker
+                                            value={220}
+                                            className=""
+                                        />
+                                        K
+                                    </h4>
                                     <p className="text-textSecondary text-base font-normal leading-relaxed">
                                         Donated Poor
                                     </p>
                                 </div>
                                 <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex-col justify-start items-start gap-1 inline-flex">
-                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">32#</h4>
+                                    <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                        <NumberTicker
+                                            value={32}
+                                            className=""
+                                        />
+                                        #
+                                    </h4>
                                     <p className="text-textSecondary text-base font-normal leading-relaxed">
                                         Love
                                     </p>
