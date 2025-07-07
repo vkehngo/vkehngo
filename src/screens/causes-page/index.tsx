@@ -38,7 +38,7 @@ const CausesPage = () => {
                     {
                         causesData.map((data, index) => {
                             return (
-                                <div className="w-full border rounded-2xl p-5 ">
+                                <div className="w-full border rounded-2xl p-5" key={index}>
                                     <div className="h-[180px] md:h-[200px] relative bg-black rounded-2xl -mt-16 mb-2">
                                         <img src={data.image} alt="" className="h-full w-full object-cover opacity-45 rounded-2xl" />
                                         <div className="absolute inset-0 flex items-center justify-center">

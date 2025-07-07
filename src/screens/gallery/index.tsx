@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 
-// ✅ Import Lightbox
 import Lightbox from "yet-another-react-lightbox";
-// ✅ Import Lightbox styles
 import "yet-another-react-lightbox/styles.css";
 
 const GalleryPage = () => {
@@ -79,7 +77,6 @@ const GalleryPage = () => {
                 index={currentIndex}
             />
 
-            {/* ✅ Added custom CSS to make the lightbox background semi-transparent */}
             <style>{`
                 .yarl__container {
                     background-color: rgba(0, 0, 0, 0.8) !important;

@@ -1,7 +1,6 @@
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import { useNavigate, useParams } from "react-router-dom";
 import { eventData } from "../events/eventsData";
-import { BsXDiamondFill } from "react-icons/bs";
 
 interface EventProp {
     id: number;
@@ -38,7 +37,7 @@ const EventDetailsPage = () => {
                         {
                             eventData.map((data, index) => {
                                 return (
-                                    <>
+                                    <div key={index}>
                                         <div className="flex items-center gap-2">
                                             <img
                                                 src="/gif.gif" // replace with your GIF path
@@ -50,7 +49,7 @@ const EventDetailsPage = () => {
                                                 className="text-md font-normal cursor-pointer">{data.title}</p>
                                         </div>
                                         <div className="w-[90%] h-[1px] bg-black/50 ml-6 mt-1 mb-2" />
-                                    </>
+                                    </div>
                                 )
                             })
                         }
