@@ -33,7 +33,7 @@ const Causes = () => {
                         cardData.map((data, index) => {
                             return (
                                 <div className="relative flex w-full flex-col group rounded-xl bg-white bg-clip-border border" key={index}>
-                                    <div className="relative mx-4 mt-4 group-hover:-mt-6 transition-all ease-in-out duration-300 h-40 overflow-hidden rounded-xl shadow-lg">
+                                    <div className="relative mx-4 mt-4 group-hover:-mt-6 group-hover:mb-6 transition-all ease-in-out duration-300 h-40 overflow-hidden rounded-xl shadow-lg">
                                         <img src={data.img} alt="" />
                                     </div>
                                     <div className="px-6 py-3">
@@ -45,7 +45,7 @@ const Causes = () => {
                                         </p>
                                     </div>
                                     <div className="px-6 py-4 pt-0">
-                                        <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                                        <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
                                             Read More
                                         </button>
                                     </div>

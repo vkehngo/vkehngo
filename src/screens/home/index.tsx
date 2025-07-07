@@ -97,7 +97,7 @@ const Home = () => {
                     <p className="text-lg md:text-lg text-white max-w-lg mx-auto text-center">
                         Call us now +91 9873653629
                     </p>
-                    <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-6 text-center align-middle font-sans text-md font-bold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                    <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
                         Make Your Contribution
                     </button>
                 </div>
@@ -123,7 +123,7 @@ const Home = () => {
                         </div>
                         <div className="w-full px-4 lg:w-1/2">
                             <div className="text-center lg:text-right"><a
-                                className="inline-flex items-center justify-center select-none rounded-lg bg-secondary py-3 px-6 text-center align-middle font-sans text-md font-bold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer"
+                                className="inline-flex items-center justify-center select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer"
                                 href="#">become a volunteern</a>
                             </div>
                         </div>

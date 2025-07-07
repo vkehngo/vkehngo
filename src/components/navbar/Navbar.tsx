@@ -28,22 +28,19 @@ const Navbar = () => {
                             <Link className='menu-item' to="/">Home</Link>
                         </li>
                         <li>
-                            <Link className='menu-item' to="/about">About</Link>
+                            <Link className='menu-item' to="/about-us">About</Link>
                         </li>
                         <li>
-                            <Link className='menu-item' to="/services">Members</Link>
+                            <Link className='menu-item' to="/causes">Causes</Link>
                         </li>
                         <li>
-                            <Link className='menu-item' to="/gallery">Causes</Link>
+                            <Link className='menu-item' to="/events">Events</Link>
                         </li>
                         <li>
-                            <Link className='menu-item' to="/gallery">Events</Link>
+                            <Link className='menu-item' to="/videos">Videos</Link>
                         </li>
                         <li>
-                            <Link className='menu-item' to="/gallery">Videos</Link>
-                        </li>
-                        <li>
-                            <Link className='menu-item' to="/contact">Gallery</Link>
+                            <Link className='menu-item' to="/gallery">Gallery</Link>
                         </li>
                         <li>
                             <Link className='menu-item' to="/contact">Contact</Link>
