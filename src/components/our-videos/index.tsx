@@ -4,7 +4,7 @@ const OurVideos = () => {
             <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                 Our Videos
             </p>
-            <p className="mb-7 text-textSecondary lg:mx-16 text-lg sm:text-xl font-normal leading-tight text-center">
+            <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
                 Explore how we’re making a difference through real stories and moments. These videos highlight our work in education, health, and the environment — bringing change across Bharat.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-9">

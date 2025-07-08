@@ -141,7 +141,7 @@ const Home = () => {
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Our Gallery
                 </p>
-                <p className="mb-7 text-textSecondary lg:mx-16 text-lg sm:text-xl font-normal leading-tight text-center">
+                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
                 </p>
                 <div className="grid grid-cols-6 col-span-2   gap-2  ">
@@ -188,7 +188,7 @@ const Home = () => {
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Get In Touch
                 </p>
-                <p className="mb-7 text-textSecondary lg:mx-16 text-lg sm:text-xl font-normal leading-tight text-center">
+                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
                 </p>
                 <div className="w-full justify-start items-start xl:gap-12 gap-5 grid lg:grid-cols-2 grid-cols-1">

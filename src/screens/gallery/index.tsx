@@ -49,7 +49,7 @@ const GalleryPage = () => {
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Our Gallery
                 </p>
-                <p className="mb-7 text-textSecondary lg:mx-16 text-lg sm:text-xl font-normal leading-tight text-center">
+                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
                 </p>
 

@@ -31,7 +31,7 @@ const CausesPage = () => {
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     The causes we care about
                 </p>
-                <p className="mb-7 text-textSecondary lg:mx-16 text-lg sm:text-xl font-normal leading-tight text-center">
+                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
                     While we serve in countless ways, we've focused our efforts in seven key areas to maximise our impact. These encompass some of the bharat most critical humanitarian needs and provide an opportunity for our members to transform the Bharat.
                 </p>
                 <div className="mt-20 space-y-20">
