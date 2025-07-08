@@ -33,10 +33,10 @@ const AboutUsPage = () => {
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Events
+                    Time
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    While we serve in countless ways, we've focused our efforts in seven key areas to maximise our impact. These encompass some of the bharat most critical humanitarian needs and provide an opportunity for our members to transform the Bharat.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sed itaque tempore ut rem animi inventore voluptas incidunt exercitationem dolores.
                 </p>
                 <div className="relative col-span-12 md:px-4 space-y-6 sm:col-span-9">
                     <div className="col-span-12 space-y-6 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
