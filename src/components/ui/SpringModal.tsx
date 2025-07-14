@@ -18,6 +18,7 @@ const ExampleWrapper = () => {
     );
 };
 
+
 const SpringModal = ({
     isOpen,
     setIsOpen,
