@@ -7,6 +7,8 @@ import CausesPage from "./screens/causes-page"
 import GalleryPage from "./screens/gallery"
 import EventsPage from "./screens/events"
 import EventDetailsPage from "./screens/event-detail"
+import ContactPage from "./screens/contact-us";
+import VideosPage from "./screens/videosPage";
 const App = () => {
   return (
     <div className="bg-white">
@@ -18,6 +20,8 @@ const App = () => {
           <Route path='/causes' element={<CausesPage />} />
           <Route path='/gallery' element={<GalleryPage />} />
           <Route path='/events' element={<EventsPage />} />
+          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/videos' element={<VideosPage />} />
           <Route path='/events/:id' element={<EventDetailsPage />} />
         </Routes>
 
