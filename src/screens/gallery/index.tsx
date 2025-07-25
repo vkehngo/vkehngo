@@ -6,40 +6,42 @@ import "yet-another-react-lightbox/styles.css";
 
 const GalleryPage = () => {
     const items = [
-        {
-            id: "1",
-            img: "https://picsum.photos/id/1015/600/900?grayscale",
-        },
-        {
-            id: "2",
-            img: "https://picsum.photos/id/1011/600/750?grayscale",
-        },
-        {
-            id: "3",
-            img: "https://picsum.photos/id/1020/600/800?grayscale",
-        },
-        {
-            id: "4",
-            img: "https://picsum.photos/id/1019/600/900?grayscale",
-        },
-        {
-            id: "5",
-            img: "https://picsum.photos/id/1014/600/750?grayscale",
-        },
-        {
-            id: "6",
-            img: "https://picsum.photos/id/1021/600/800?grayscale",
-        },
-        {
-            id: "7",
-            img: "/banner-1.jpeg",
-        },
+        '/galleryImages/4.png',
+        '/galleryImages/5.png',
+        '/galleryImages/6.png',
+        '/galleryImages/7.png',
+        '/galleryImages/8.png',
+        '/galleryImages/9.png',
+        '/galleryImages/5.jpg',
+        '/galleryImages/6.jpeg',
+        '/galleryImages/7.jpeg',
+        '/galleryImages/8.jpeg',
+        '/galleryImages/9.jpeg',
+        '/galleryImages/12.jpeg',
+        '/galleryImages/13.jpeg',
+        '/galleryImages/14.jpeg',
+        '/galleryImages/15.jpeg',
+        '/galleryImages/16.jpeg',
+        '/galleryImages/17.jpeg',
+        '/galleryImages/18.jpeg',
+        '/galleryImages/21.jpeg',
+        '/galleryImages/22.jpeg',
+        '/galleryImages/24.jpeg',
+        '/galleryImages/25.jpeg',
+        '/galleryImages/26.jpeg',
+        '/galleryImages/27.png',
+        '/galleryImages/28.jpg',
+        '/galleryImages/29.jpeg',
+        '/galleryImages/30.jpeg',
+        '/galleryImages/31.jpeg',
+        '/galleryImages/32.jpeg',
+        '/galleryImages/33.jpeg',
     ];
 
     const [open, setOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const slides = items.map((item) => ({ src: item.img }));
+    const slides = items.map((item) => ({ src: item }));
 
     return (
         <div>
@@ -55,14 +57,14 @@ const GalleryPage = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {items.map((item, index) => (
-                        <div key={item.id}>
+                        <div key={index}>
                             <img
                                 onClick={() => {
                                     setCurrentIndex(index);
                                     setOpen(true);
                                 }}
                                 className="h-60 w-full rounded-lg object-cover cursor-pointer hover:scale-[102%] transition-all ease-in-out duration-300"
-                                src={item.img}
+                                src={item}
                                 alt=""
                             />
                         </div>

@@ -38,7 +38,7 @@ const EventsSection = () => {
                         Donate
                     </button>
                     <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
-                        become a volunteern
+                        become a volunteer
                     </button>
                 </div>
             </section>
@@ -158,29 +158,29 @@ const descriptionVariants = {
 const items = [
     {
         id: 1,
-        title: "Save The Environment",
+        title: "Ramayan Path – A Spiritual Gathering",
         Icon: FiDollarSign,
         imgSrc:
-            "https://im.whatshot.in/img/2020/Jun/istock-1130655067-cropped-1591265020.jpg",
+            "/eventsImages/ramayanpath.png",
         description:
-            "We must take action to save our environment before it's too late. We need to reduce our carbon footprint by driving less, using public transport ...",
+            "A peaceful Ramayan Path was organized to connect our community with timeless spiritual values...",
     },
     {
         id: 2,
-        title: "Child Education",
+        title: "Colors of Hope – Drawing Competition",
         Icon: FiPlay,
         imgSrc:
-            "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+            "/eventsImages/1.png",
         description:
-            "Free child education is a fundamental right that ensures every child has access to quality education, regardless of their social or economic backg ...",
+            "A vibrant drawing competition was hosted by Viklang Kendra & Education Hub to ignite the spark...",
     },
     {
         id: 3,
-        title: "Computer Education",
+        title: "Kheer Drive – Spreading Sweetness & Smiles",
         Icon: FiBell,
         imgSrc:
-            "https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+            "/eventsImages/2.png",
         description:
-            "Access to free computer education is crucial given the rapid advancement of technology that constantly shapes the world we live in. It can be the ...",
+            "A special Kheer distribution drive was held to spread sweetness, warmth, and joy among the community...",
     },
 ];

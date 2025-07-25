@@ -4,17 +4,17 @@ const Causes = () => {
         {
             title: "Education",
             des: "Education is a fundamental right, and it's crucial for the growth and development of every indi..",
-            img: "/education.jpg"
+            img: "/galleryImages/25.jpeg"
         },
         {
-            title: "Health",
+            title: "Employment",
             des: "Get a free health checkup at our clinic! Our team of experienced doctors and nurses will provide..",
-            img: "/health.jpg"
+            img: "/empImage.jpeg"
         },
         {
-            title: "Environment",
+            title: "Food Donation",
             des: "We must take action to save our environment before it's too late. We need to reduce our..",
-            img: "/environment.jpg"
+            img: "/galleryImages/24.jpeg"
         },
     ]
 
@@ -34,7 +34,7 @@ const Causes = () => {
                             return (
                                 <div className="relative flex w-full flex-col group rounded-xl bg-white bg-clip-border border" key={index}>
                                     <div className="relative mx-4 mt-4 group-hover:-mt-6 group-hover:mb-6 transition-all ease-in-out duration-300 h-40 overflow-hidden rounded-xl shadow-lg">
-                                        <img src={data.img} alt="" />
+                                        <img src={data.img} alt="" className=" object-bottom"/>
                                     </div>
                                     <div className="px-6 py-3">
                                         <h5 className="mb-1 block text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-textPrimary">

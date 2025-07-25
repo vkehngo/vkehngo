@@ -19,11 +19,11 @@ const MissionVision = () => {
                 ))}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className=" bg-cyan-700 rounded-2xl w-full p-5 text-center">
-                    <p className="text-white text-2xl sm:text-3xl font-bold leading-tight text-center mb-1">{
+                <div className=" bg-secondary rounded-2xl w-full p-5 text-center">
+                    <p className="text-white text-2xl sm:text-3xl font-bold leading-tight text-center my-5">{
                         selected === 'Mission' ? "Our Mission" : "Our Vision"}</p>
-                    <p className="text-white text-sm md:text-base font-normal leading-relaxed text-center">{
-                        selected === 'Mission' ? "The mission of a non-governmental organization (NGO) is to address a specific social or environmental issue. NGOs work to promote positive societal change through various means, such as advocacy, direct service provision, research, and education. The primary goal of an NGO is to improve the well-being of individuals and communities, often in marginalized or under-resourced areas." : " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, minus. Quam necessitatibus natus corporis ad? Quis aperiam debitis autem asperiores minus repellendus, ea, nisi labore ad ullam rem error animi. Ut deleniti esse rerum perferendis voluptatum incidunt tenetur cupiditate ratione, quis nihil fuga laudantium voluptatibus."}</p>
+                    <p className="text-white text-sm md:text-base font-normal leading-relaxed text-justify">{
+                        selected === 'Mission' ? "To empower differently-abled individuals and underprivileged children by providing free, quality education, vocational training, and employment support — helping them live with dignity, independence, and purpose. We aim to build an inclusive society where every individual, regardless of physical ability or background, has equal access to growth  opportunity." : "To create a nationwide network of inclusive education and employment centers where every disabled person and underprivileged child can receive the tools, training, and guidance they need to lead empowered lives. Our vision is a barrier-free India — where ability is recognized, dreams are nurtured, and every life is valued equally."}</p>
                 </div>
                 <div className="w-full rounded-2xl aspect-video md:aspect-auto">
                     <img src={

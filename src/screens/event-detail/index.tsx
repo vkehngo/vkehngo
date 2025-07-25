@@ -8,6 +8,7 @@ interface EventProp {
     des: string;
     image: string;
     date?: string;
+    video?: string;
 }
 
 const EventDetailsPage = () => {
@@ -21,16 +22,29 @@ const EventDetailsPage = () => {
 
     return (
         <div>
-            <BreadcrumbBanner title='Event Details' />
+            <BreadcrumbBanner title='Highlights from Our Events & Initiatives' />
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                     <div className=" col-span-3">
                         <div className="w-full md:w-[90%] h-[300px] md:h-[400px]">
                             <img src={event.image} alt="" className="w-full h-full object-cover rounded-2xl" />
                         </div>
-                        <p className="bg-primary inline-block py-2 px-3 rounded-lg text-white my-4">{event.date}</p>
-                        <p className="font-semibold uppercase text-lg md:text-2xl text-textPrimary">{event.title}</p>
-                        <p className="font-normal text-md md:text-xl text-textSecondary">{event.des}</p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
+                            <div className="col-span-2">
+                                <p className="bg-primary inline-block py-2 px-3 rounded-lg text-white my-4">{event.date}</p>
+                                <p className="font-semibold uppercase text-lg md:text-2xl text-textPrimary">{event.title}</p>
+                                <p className="font-normal text-md md:text-lg text-textSecondary text-justify">{event.des}</p>
+                            </div>
+                            <iframe
+                                className="w-full h-full rounded-lg aspect-[9/16]"
+                                src={event.video}
+                                title='ttt'
+                                frameBorder="0"
+                                scrolling="no"
+                                allowTransparency
+                                allowFullScreen
+                            />
+                        </div>
                     </div>
                     <div className="border-t pt-3 md:border-l md:border-t-0 md:p-5">
                         <p className="font-semibold uppercase text-lg md:text-2xl text-black mb-5">More Events</p>

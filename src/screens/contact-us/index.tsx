@@ -1,9 +1,6 @@
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../components/ui/carousel";
-import { Card, CardContent } from "../../components/ui/card";
-import { EmployeeList, VolunteernList } from "./data";
 import Swal from "sweetalert2";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -11,7 +8,7 @@ import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
 
 
 const ContactPage = () => {
-    const tabs = ["VOLUNTEERN", "CARRER"];
+    const tabs = ["VOLUNTEER", "CAREERS"];
     const [selected, setSelected] = useState(tabs[0]);
 
     const [loading, setLoading] = useState<boolean>(false);
@@ -22,7 +19,7 @@ const ContactPage = () => {
         setLoading(true);
 
         const formData = new FormData(event.currentTarget);
-        formData.append("access_key", "da7845ae-6a4f-4e3a-ac34-307c304da850");
+        formData.append("access_key", "dab5db9b-7451-47bf-86ad-02cc32d8303c");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -62,15 +59,6 @@ const ContactPage = () => {
         <div>
             <BreadcrumbBanner title="Contact Us" />
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
-                <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Change begins with us all
-                </p>
-                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    We believe that corporate partnerships are not only a way to help brands meet their CSR objectives, but also create sustainable impact for India’s children.
-                </p>
-            </div>
-            <img src="https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg" alt="" className="w-full -mt-16" />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
                 <div className="flex justify-center w-full mb-5">
                     <div className="inline-flex items-center gap-2 border rounded-lg px-2 py-2">
                         {tabs.map((tab) => (
@@ -89,42 +77,8 @@ const ContactPage = () => {
                     <p className="text-gray-500 lg:mx-16 text-xs sm:text-lg font-normal leading-tight text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex unde autem magni quaerat beatae omnis nostrum facere soluta sequi. Natus?</p>
                     <div className="flex justify-center items-center my-5">
                         <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
-                            {selected === 'VOLUNTEERN' ? 'become a volunteern' : "Join Team"}
+                            {selected === 'VOLUNTEERN' ? 'become a volunteer' : "Join Team"}
                         </button>
-                    </div>
-                    <div className="flex items-center justify-center">
-                        <Carousel className="px-4 mx-auto w-[78%] md:w-2xl lg:w-5xl sm:px-6 lg:px-1">
-                            <CarouselContent className="-ml-1">
-                                {(selected === "VOLUNTEERN" ? VolunteernList : EmployeeList).map((feature, index) => (
-                                    <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                                        <div className="p-1 group"> {/* group for hover control */}
-                                            <Card>
-                                                <CardContent className="flex aspect-square items-center justify-center py-0 bg-[#000] rounded-xl relative overflow-hidden">
-                                                    {/* Image with opacity transition */}
-                                                    <img
-                                                        src={feature.image}
-                                                        alt=""
-                                                        className="w-full h-full object-cover rounded-xl opacity-95 group-hover:opacity-50 transition-opacity duration-300"
-                                                    />
-                                                    {/* Title only visible on hover */}
-                                                    <p className="text-white font-semibold text-2xl absolute text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                        {feature.title}
-                                                    </p>
-                                                    <div className="absolute w-full bg-black bottom-0 text-center py-[2px] md:hidden">
-                                                        <p className="text-white font-medium text-md">
-                                                            {feature.title}
-
-                                                        </p>
-                                                    </div>
-                                                </CardContent>
-                                            </Card>
-                                        </div>
-                                    </CarouselItem>
-                                ))}
-                            </CarouselContent>
-                            <CarouselPrevious />
-                            <CarouselNext />
-                        </Carousel>
                     </div>
                 </div>
             </div>
@@ -191,13 +145,13 @@ const ContactPage = () => {
                         </div>
                     </form>
                     <div className="w-full lg:order-2 order-1 flex-col justify-center lg:items-start items-center gap-10 inline-flex">
-                        <div className="flex-col justify-center gap-6 flex">
+                        <div className="flex-col justify-center items-start gap-6 flex">
                             <div className="flex justify-center items-center gap-2">
                                 <div className="p-2 bg-white rounded-full text-textPrimary shadow-md">
                                     <FaLocationDot size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    KH No.435, Gali No.2, Village Basai, Gurugram, Haryana 122001
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -205,7 +159,7 @@ const ContactPage = () => {
                                     <FaPhoneAlt size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    +91 9873653629
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -213,7 +167,7 @@ const ContactPage = () => {
                                     <MdEmail size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    info@viklangkendra.org
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -221,7 +175,7 @@ const ContactPage = () => {
                                     <MdOutlineAccessTimeFilled size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    10:00 AM - 6:00 PM (Mon - Sat)
                                 </p>
                             </div>
                         </div>

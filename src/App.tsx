@@ -9,10 +9,21 @@ import EventsPage from "./screens/events"
 import EventDetailsPage from "./screens/event-detail"
 import ContactPage from "./screens/contact-us";
 import VideosPage from "./screens/videosPage";
+import { FaYoutube } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
 const App = () => {
   return (
     <div className="bg-white">
       <BrowserRouter>
+        <div className="w-full h-[35px] md:h-[35px] relative bg-secondary flex items-center justify-between px-4">
+          <p className="text-white">Viklang Kendra & Education Hub</p>
+          <div className="flex items-center justify-end gap-2">
+            <FaYoutube color="white" size={20}/>
+            <AiFillInstagram color="white" size={20}/>
+            <FaFacebookSquare color="white" size={20}/>
+          </div>
+        </div>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

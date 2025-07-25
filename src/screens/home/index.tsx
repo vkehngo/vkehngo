@@ -2,17 +2,19 @@ import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaPeopleGroup } from "react-icons/fa6";
 import AboutUs from "../../components/about-us";
-import { SwipeCarousel } from "../../components/carousel";
 import Causes from "../../components/causes";
 import EventsSection from "../../components/events-section";
 import MissionVision from "../../components/mission-vision";
 import OurVideos from "../../components/our-videos";
-import aboutImage from '/banner-3.jpg'
+// @ts-ignore
+import aboutImage from '/banner-3.JPG'
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
 import Swal from "sweetalert2";
+import { NumberTicker } from "../../components/ui/NumberTicker";
+import { BiSolidDonateHeart, BiSolidFoodMenu } from "react-icons/bi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +47,7 @@ const Home = () => {
         setLoading(true);
 
         const formData = new FormData(event.currentTarget);
-        formData.append("access_key", "da7845ae-6a4f-4e3a-ac34-307c304da850");
+        formData.append("access_key", "dab5db9b-7451-47bf-86ad-02cc32d8303c");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -82,8 +84,103 @@ const Home = () => {
     };
     return (
         <div>
-            <SwipeCarousel />
+            {/* <SwipeCarousel /> */}
+            <div className="w-full relative bg-black md:flex">
+                <div className="w-[100%] hidden md:block md:w-[20%] bg-[#0072CE]  h-[250px] md:h-[550px]"></div>
+                <div className="w-[100%] md:w-[80%] h-[250px] md:h-[550px]">
+                    <img src="/hero.jpg" alt="" className="w-full h-full object-cover" />
+                </div>
+                <div className="relative md:absolute inset-0 flex flex-col items-center justify-center bg-white w-full md:w-[35%] md:left-[5%] md:top-[5%] h-[90%] p-5 md:rounded-2xl ">
+                    <p className="mb-5 text-4xl font-bold text-primary leading-tight text-center">Hope Begins with Opportunity</p>
+                    <p className="mb-12 text-xl text-center">We serve the disabled and underprivileged with free education, mid-day meals, and job training — turning struggle into strength.</p>
+                    <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-8 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
             <div className="fade-up"><AboutUs /></div>
+            <EventsSection />
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
+                <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
+                    Our Impact
+                </p>
+                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
+                </p>
+                <div className="w-full flex-col justify-center items-start gap-6 flex">
+                    <div className="w-full justify-start items-center gap-8 grid md:grid-cols-4 grid-cols-1">
+                        <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex justify-start items-center gap-3 shadow-sm shadow-secondary">
+                            <BiSolidDonateHeart size={50} className="text-textPrimary" />
+                            <div>
+                                <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                    <NumberTicker
+                                        value={45}
+                                        className=""
+                                    />
+                                    +
+                                </h4>
+                                <p className="text-textPrimary text-base font-normal leading-relaxed">
+                                    Happy Donators
+                                </p>
+                            </div>
+                        </div>
+                        <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex justify-start items-center gap-3 shadow-sm shadow-secondary">
+                            <FaPeopleGroup size={50} className="text-textPrimary" />
+                            <div>
+                                <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                    <NumberTicker
+                                        value={250}
+                                        className=""
+                                    />
+                                    +
+                                </h4>
+                                <p className="text-textPrimary text-base font-normal leading-relaxed">
+                                    Volunteer
+                                </p>
+                            </div>
+                        </div>
+                        <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex justify-start items-center gap-3 shadow-sm shadow-secondary">
+                            <BiSolidFoodMenu size={50} className="text-textPrimary" />
+                            <div>
+                                <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                    <NumberTicker
+                                        value={1000}
+                                        className=""
+                                    />
+                                    +
+                                </h4>
+                                <p className="text-textPrimary text-base font-normal leading-relaxed">
+                                    Donated Poor
+                                </p>
+                            </div>
+                        </div>
+                        <div className="w-full h-full p-3.5 rounded-xl border border-primary hover:border-primary transition-all duration-700 ease-in-out flex justify-start items-center gap-3 shadow-sm shadow-secondary">
+                            <BiSolidDonateHeart size={50} className="text-textPrimary" />
+                            <div>
+                                <h4 className="text-textPrimary text-2xl font-bold leading-9">
+                                    <NumberTicker
+                                        value={500}
+                                        className=""
+                                    />
+                                    +
+                                </h4>
+                                <p className="text-textPrimary text-base font-normal leading-relaxed">
+                                    NGO Drives
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+                <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
+                    Change begins with us all
+                </p>
+                <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
+                    We believe that corporate partnerships are not only a way to help brands meet their CSR objectives, but also create sustainable impact for India’s children.
+                </p>
+            </div>
+            <img src="/ngoimage.png" alt="" className="w-full -mt-16" />
             <div className="fade-up"><Causes /></div>
             <section className="w-full relative py-14 lg:pb-20 px-5 lg:px-0 bg-black" id="about">
                 <div
@@ -91,12 +188,9 @@ const Home = () => {
                     style={{ backgroundImage: `url(${aboutImage})` }}
                 ></div>
                 <div className="relative z-10 rounded-2xl mx-auto flex flex-col gap-y-5 justify-center items-center">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-xl lg:max-w-3xl mx-auto font-bold text-white text-center">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-xl lg:max-w-3xl mx-auto font-bold text-white text-center m-5">
                         Are You Like To Help People Across The World Through Social Causes ?
                     </h3>
-                    <p className="text-lg md:text-lg text-white max-w-lg mx-auto text-center">
-                        Call us now +91 9873653629
-                    </p>
                     <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
                         Make Your Contribution
                     </button>
@@ -105,34 +199,19 @@ const Home = () => {
             <div className="fade-up">
                 <OurVideos />
             </div>
-            <section className="relative z-10 overflow-hidden bg-primary py-16 px-8">
-                <div className="container">
-                    <div className="-mx-4 flex flex-wrap items-center">
-                        <div className="w-full px-4 lg:w-1/2">
-                            <div className="text-center lg:text-left ">
-                                <div className="mb-10 lg:mb-0 ">
-                                    <h1
-                                        className="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
-                                        Introduction</h1>
-                                    <p
-                                        className="w-full text-lg sm:text-xl font-normal leading-tight text-white">
-                                        While we serve in countless ways, we’ve focused our efforts in seven key areas to maximise our impact. These encompass some of the bharat most critical humanitarian needs and provide an opportunity for our members to transform the bharat.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-full px-4 lg:w-1/2">
-                            <div className="text-center lg:text-right"><a
-                                className="inline-flex items-center justify-center select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer"
-                                href="#">become a volunteern</a>
-                            </div>
-                        </div>
-                    </div>
+            <section className="w-full relative py-14 lg:pb-20 px-5 lg:px-0 bg-black" id="about">
+                <div
+                    className="absolute inset-0 bg-cover bg-center opacity-40"
+                    style={{ backgroundImage: `url(${aboutImage})` }}
+                ></div>
+                <div className="relative z-10 rounded-2xl mx-auto flex flex-col gap-y-5 justify-center items-center">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-xl lg:max-w-3xl mx-auto font-bold text-white text-center m-5">
+                        Become a Volunteer at Viklang Kendra & Education Hub and Be the Reason Someone Smiles Today!
+                    </h3>
+                    <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                        Become a Volunteer
+                    </button>
                 </div>
-                <span className="absolute top-0 right-0 -z-10">
-                    <svg width="388" height="250" viewBox="0 0 388 220" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.05" d="M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z" fill="url(#paint0_linear_971_6910)"></path><defs><linearGradient id="paint0_linear_971_6910" x1="60.5" y1="111" x2="287" y2="111" gradientUnits="userSpaceOnUse"><stop offset="0.520507" stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient></defs></svg></span><span className="absolute top-0 right-0 -z-10"><svg width="324" height="250" viewBox="0 0 324 220" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.05" d="M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z" fill="url(#paint0_linear_971_6911)"></path><defs><linearGradient id="paint0_linear_971_6911" x1="60.5" y1="111" x2="287" y2="111" gradientUnits="userSpaceOnUse"><stop offset="0.520507" stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient></defs></svg></span><span className="absolute top-4 left-4 -z-10"><svg width="43" height="56" viewBox="0 0 43 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.5"><circle cx="40.9984" cy="1.49626" r="1.49626" transform="rotate(90 40.9984 1.49626)" fill="white"></circle><circle cx="27.8304" cy="1.49626" r="1.49626" transform="rotate(90 27.8304 1.49626)" fill="white"></circle><circle cx="14.6644" cy="1.49626" r="1.49626" transform="rotate(90 14.6644 1.49626)" fill="white"></circle><circle cx="1.49642" cy="1.49626" r="1.49626" transform="rotate(90 1.49642 1.49626)" fill="white"></circle><circle cx="40.9984" cy="14.6642" r="1.49626" transform="rotate(90 40.9984 14.6642)" fill="white"></circle><circle cx="27.8304" cy="14.6642" r="1.49626" transform="rotate(90 27.8304 14.6642)" fill="white"></circle><circle cx="14.6644" cy="14.6642" r="1.49626" transform="rotate(90 14.6644 14.6642)" fill="white"></circle><circle cx="1.49642" cy="14.6642" r="1.49626" transform="rotate(90 1.49642 14.6642)" fill="white"></circle><circle cx="40.9984" cy="27.8302" r="1.49626" transform="rotate(90 40.9984 27.8302)" fill="white"></circle><circle cx="27.8304" cy="27.8302" r="1.49626" transform="rotate(90 27.8304 27.8302)" fill="white"></circle><circle cx="14.6644" cy="27.8302" r="1.49626" transform="rotate(90 14.6644 27.8302)" fill="white"></circle><circle cx="1.49642" cy="27.8302" r="1.49626" transform="rotate(90 1.49642 27.8302)" fill="white"></circle><circle cx="40.9984" cy="40.9982" r="1.49626" transform="rotate(90 40.9984 40.9982)" fill="white"></circle><circle cx="27.8304" cy="40.9963" r="1.49626" transform="rotate(90 27.8304 40.9963)" fill="white"></circle><circle cx="14.6644" cy="40.9982" r="1.49626" transform="rotate(90 14.6644 40.9982)" fill="white"></circle><circle cx="1.49642" cy="40.9963" r="1.49626" transform="rotate(90 1.49642 40.9963)" fill="white"></circle><circle cx="40.9984" cy="54.1642" r="1.49626" transform="rotate(90 40.9984 54.1642)" fill="white"></circle><circle cx="27.8304" cy="54.1642" r="1.49626" transform="rotate(90 27.8304 54.1642)" fill="white"></circle><circle cx="14.6644" cy="54.1642" r="1.49626" transform="rotate(90 14.6644 54.1642)" fill="white"></circle><circle cx="1.49642" cy="54.1642" r="1.49626" transform="rotate(90 1.49642 54.1642)" fill="white"></circle></g>
-                    </svg>
-                </span>
             </section>
             <div className="bg-gray-100">
                 <MissionVision />
@@ -145,38 +224,37 @@ const Home = () => {
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
                 </p>
                 <div className="grid grid-cols-6 col-span-2   gap-2  ">
-                    <div className=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+                    <div className=" overflow-hidden rounded-xl col-span-3 max-h-[18rem]">
                         <img className="h-full w-full object-cover "
-                            src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                            src="/2.png"
                             alt="" />
                     </div>
-                    <div className=" overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+                    <div className=" overflow-hidden rounded-xl col-span-3 max-h-[18rem]">
                         <img className="h-full w-full object-cover  "
-                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1399&q=80"
+                            src="/galleryImages/7.jpeg"
                             alt="" />
                     </div>
-                    <div className=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+                    <div className=" overflow-hidden rounded-xl col-span-2 max-h-[18rem]">
                         <img className="h-full w-full object-cover "
-                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            src="/galleryImages/12.jpeg"
                             alt="" />
                     </div>
-                    <div className=" overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+                    <div className=" overflow-hidden rounded-xl col-span-2 max-h-[18rem]">
                         <img className="h-full w-full object-cover "
-                            src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                            src="/galleryImages/14.jpeg"
                             alt="" />
                     </div>
-                    <div className="relative overflow-hidden rounded-xl col-span-2 max-h-[10rem] cursor-pointer">
+                    <div className="relative overflow-hidden rounded-xl col-span-2 max-h-[18rem] cursor-pointer">
                         <div
                             className="text-white text-xl absolute inset-0  bg-slate-900/80 flex justify-center items-center">
                             + 23
                         </div>
                         <img className="h-full w-full object-cover "
-                            src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+                            src="/galleryImages/18.jpeg"
                             alt="" />
                     </div>
                 </div>
             </div>
-            <EventsSection />
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                     <img src="/brand-1.jpg" alt="" className="w-full h-28 object-contain" />
@@ -247,13 +325,13 @@ const Home = () => {
                         </div>
                     </form>
                     <div className="w-full lg:order-2 order-1 flex-col justify-center lg:items-start items-center gap-10 inline-flex">
-                        <div className="flex-col justify-center gap-6 flex">
+                        <div className="flex-col justify-center items-start gap-6 flex">
                             <div className="flex justify-center items-center gap-2">
                                 <div className="p-2 bg-white rounded-full text-textPrimary shadow-md">
                                     <FaLocationDot size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    KH No.435, Gali No.2, Village Basai, Gurugram, Haryana 122001
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -261,7 +339,7 @@ const Home = () => {
                                     <FaPhoneAlt size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    +91 9873653629
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -269,7 +347,7 @@ const Home = () => {
                                     <MdEmail size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                   info@viklangkendra.org
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -277,7 +355,7 @@ const Home = () => {
                                     <MdOutlineAccessTimeFilled size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    1234 Street Name, City, State, 12345
+                                    10:00 AM - 6:00 PM (Mon - Sat)
                                 </p>
                             </div>
                         </div>
