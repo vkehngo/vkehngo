@@ -1,5 +1,5 @@
 // @ts-ignore
-import banner from '/breadcumImage.png';
+import banner from '/breadcumImage.webp';
 
 interface BreadcrumbBannerProps {
     title: string;

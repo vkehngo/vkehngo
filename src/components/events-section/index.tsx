@@ -161,7 +161,7 @@ const items = [
         title: "Ramayan Path – A Spiritual Gathering",
         Icon: FiDollarSign,
         imgSrc:
-            "/eventsImages/ramayanpath.png",
+            "/eventsImages/ramayanpath.webp",
         description:
             "A peaceful Ramayan Path was organized to connect our community with timeless spiritual values...",
     },
@@ -170,7 +170,7 @@ const items = [
         title: "Colors of Hope – Drawing Competition",
         Icon: FiPlay,
         imgSrc:
-            "/eventsImages/1.png",
+            "/eventsImages/1.webp",
         description:
             "A vibrant drawing competition was hosted by Viklang Kendra & Education Hub to ignite the spark...",
     },
@@ -179,7 +179,7 @@ const items = [
         title: "Kheer Drive – Spreading Sweetness & Smiles",
         Icon: FiBell,
         imgSrc:
-            "/eventsImages/2.png",
+            "/eventsImages/2.webp",
         description:
             "A special Kheer distribution drive was held to spread sweetness, warmth, and joy among the community...",
     },

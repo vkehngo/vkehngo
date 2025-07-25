@@ -7,17 +7,17 @@ const CausesPage = () => {
         {
             title: "Education",
             des: "Education is a fundamental right, and it's crucial for the growth and development of every individual. Education molds our ideas, builds our personality, and creates a sense of responsibility towards society. Unfortunately, not everyone can afford education, which results in a significant population remaining uneducated. Providing free education to all is crucial for the welfare of society and the progress of the country. Governments and philanthropists need to take the initiative to ensure that every individual has access to education, as education is the only sustainable solution to poverty, inequality, and social injustice.",
-            image: "https://goodworks.org.in/wp-content/uploads/2023/11/NGOs-working-for-education-in-India-1.jpg"
+            image: "https://goodworks.org.in/wp-content/uploads/2023/11/NGOs-working-for-education-in-India-1.webp"
         },
         {
             title: "Health",
             des: "Get a free health checkup at our clinic! Our team of experienced doctors and nurses will provide a comprehensive assessment of your overall health and well-being, including vital signs, blood pressure, body mass index, and more. We'll also offer personalized recommendations and resources to help you maintain a healthy lifestyle. Best of all, there's no cost or obligation – just book an appointment and we'll take care of the rest! Don't wait – take the first step towards a happier, healthier you today.",
-            image: "https://savioursfoundation.org/wp-content/uploads/2020/03/Health.jpg"
+            image: "https://savioursfoundation.org/wp-content/uploads/2020/03/Health.webp"
         },
         {
             title: "Environment",
             des: "We must take action to save our environment before it's too late. We need to reduce our carbon footprint by driving less, using public transportation, or carpooling. We should also conserve water by turning off the tap when we brush our teeth and taking shorter showers. It's important to properly dispose of waste by recycling and composting. We can also support sustainable businesses and reduce our energy consumption by using energy-efficient appliances and turning off lights when we leave a room. Finally, we must advocate for government policies that prioritize protecting the environment. Small actions can have a big impact on our planet’s health.",
-            image: "https://www.persistentfoundation.org/wp-content/uploads/2021/07/large-image-cd-tree-plantation-july-2019.jpg"
+            image: "https://www.persistentfoundation.org/wp-content/uploads/2021/07/large-image-cd-tree-plantation-july-2019.webp"
         },
 
     ]

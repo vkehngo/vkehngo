@@ -4,10 +4,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const AboutUs = () => {
 
     const featuresList = [
-        {image:'2.png'},
-        {image:'3.png'},
-        {image:'4.png'},
-        {image:'5.png'},
+        {image:'2.webp'},
+        {image:'3.webp'},
+        {image:'4.webp'},
+        {image:'5.webp'},
     ];
 
     return (

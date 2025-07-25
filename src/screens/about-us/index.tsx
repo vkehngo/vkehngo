@@ -31,12 +31,12 @@ const AboutUsPage = () => {
     ]
 
     const featuresList = [
-        { image: '/team/1.jpg', title: 'Dinesh Mehta', des: 'member 1' },
-        { image: '/team/3.jpg', title: 'Dollar Chauduary', des: 'member 1' },
-        { image: '/team/2.jpg', title: 'Umesh Chand', des: 'member 1' },
-        { image: '/team/5.jpg', title: 'Priti', des: 'member 1' },
-        { image: '/team/6.png', title: 'Malti', des: 'member 1' },
-        { image: '/team/4.jpg', title: 'Himanshu', des: 'member 1' },
+        { image: '/team/1.webp', title: 'Dinesh Mehta', des: 'member 1' },
+        { image: '/team/3.webp', title: 'Dollar Chauduary', des: 'member 1' },
+        { image: '/team/2.webp', title: 'Umesh Chand', des: 'member 1' },
+        { image: '/team/5.webp', title: 'Priti', des: 'member 1' },
+        { image: '/team/6.webp', title: 'Malti', des: 'member 1' },
+        { image: '/team/4.webp', title: 'Himanshu', des: 'member 1' },
     ];
 
     return (
@@ -73,7 +73,7 @@ const AboutUsPage = () => {
                         </div>
                     </div>
                     <div>
-                        <img src="/certificate.jpg"
+                        <img src="/certificate.webp"
                             className="h-[30rem]"
                             alt="" />
                     </div>

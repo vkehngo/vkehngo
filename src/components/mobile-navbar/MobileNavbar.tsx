@@ -1,6 +1,6 @@
 import { Link} from 'react-router-dom';
 import './mobileNav.css';
-import logo from '/logo.png';
+import logo from '/logo.webp';
 
 // @ts-ignore
 const MobileNavbar = ({ isOpen, toggleMenu }) => {

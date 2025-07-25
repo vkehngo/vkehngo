@@ -1,5 +1,5 @@
 import './navbar.css';
-import logo from '/logo.png';
+import logo from '/logo.webp';
 import { IoMenu } from "react-icons/io5";
 import { useState } from 'react';
 import { IoClose } from "react-icons/io5";

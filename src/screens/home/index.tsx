@@ -9,7 +9,7 @@ import EventsSection from "../../components/events-section";
 import MissionVision from "../../components/mission-vision";
 import OurVideos from "../../components/our-videos";
 // @ts-ignore
-import aboutImage from '/banner-3.JPG'
+import aboutImage from '/banner-3.webp'
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
 import Swal from "sweetalert2";
@@ -88,7 +88,7 @@ const Home = () => {
             <div className="w-full relative bg-black md:flex">
                 <div className="w-[100%] hidden md:block md:w-[20%] bg-[#0072CE]  h-[250px] md:h-[550px]"></div>
                 <div className="w-[100%] md:w-[80%] h-[250px] md:h-[550px]">
-                    <img src="/hero.jpg" alt="" className="w-full h-full object-cover" />
+                    <img src="/hero.webp" alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="relative md:absolute inset-0 flex flex-col items-center justify-center bg-white w-full md:w-[35%] md:left-[5%] md:top-[5%] h-[90%] p-5 md:rounded-2xl ">
                     <p className="mb-5 text-4xl font-bold text-primary leading-tight text-center">Hope Begins with Opportunity</p>
@@ -180,7 +180,7 @@ const Home = () => {
                     We believe that corporate partnerships are not only a way to help brands meet their CSR objectives, but also create sustainable impact for India’s children.
                 </p>
             </div>
-            <img src="/ngoimage.png" alt="" className="w-full -mt-16" />
+            <img src="/ngoimage.webp" alt="" className="w-full -mt-16" />
             <div className="fade-up"><Causes /></div>
             <section className="w-full relative py-14 lg:pb-20 px-5 lg:px-0 bg-black" id="about">
                 <div
@@ -226,22 +226,22 @@ const Home = () => {
                 <div className="grid grid-cols-6 col-span-2   gap-2  ">
                     <div className=" overflow-hidden rounded-xl col-span-3 max-h-[18rem]">
                         <img className="h-full w-full object-cover "
-                            src="/2.png"
+                            src="/2.webp"
                             alt="" />
                     </div>
                     <div className=" overflow-hidden rounded-xl col-span-3 max-h-[18rem]">
                         <img className="h-full w-full object-cover  "
-                            src="/galleryImages/7.jpeg"
+                            src="/galleryImages/7.webp"
                             alt="" />
                     </div>
                     <div className=" overflow-hidden rounded-xl col-span-2 max-h-[18rem]">
                         <img className="h-full w-full object-cover "
-                            src="/galleryImages/12.jpeg"
+                            src="/galleryImages/12.webp"
                             alt="" />
                     </div>
                     <div className=" overflow-hidden rounded-xl col-span-2 max-h-[18rem]">
                         <img className="h-full w-full object-cover "
-                            src="/galleryImages/14.jpeg"
+                            src="/galleryImages/14.webp"
                             alt="" />
                     </div>
                     <div className="relative overflow-hidden rounded-xl col-span-2 max-h-[18rem] cursor-pointer">
@@ -250,16 +250,16 @@ const Home = () => {
                             + 23
                         </div>
                         <img className="h-full w-full object-cover "
-                            src="/galleryImages/18.jpeg"
+                            src="/galleryImages/18.webp"
                             alt="" />
                     </div>
                 </div>
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
-                    <img src="/brand-1.jpg" alt="" className="w-full h-28 object-contain" />
-                    <img src="/brand-2.png" alt="" className="w-full h-28 object-contain" />
-                    <img src="/brand-3.jpg" alt="" className="w-full h-28 object-contain" />
+                    <img src="/brand-1.webp" alt="" className="w-full h-28 object-contain" />
+                    <img src="/brand-2.webp" alt="" className="w-full h-28 object-contain" />
+                    <img src="/brand-3.webp" alt="" className="w-full h-28 object-contain" />
                 </div>
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">

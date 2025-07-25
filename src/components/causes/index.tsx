@@ -4,17 +4,17 @@ const Causes = () => {
         {
             title: "Education",
             des: "Education is a fundamental right, and it's crucial for the growth and development of every indi..",
-            img: "/galleryImages/25.jpeg"
+            img: "/galleryImages/25.webp"
         },
         {
             title: "Employment",
             des: "Get a free health checkup at our clinic! Our team of experienced doctors and nurses will provide..",
-            img: "/empImage.jpeg"
+            img: "/empImage.webp"
         },
         {
             title: "Food Donation",
             des: "We must take action to save our environment before it's too late. We need to reduce our..",
-            img: "/galleryImages/24.jpeg"
+            img: "/galleryImages/24.webp"
         },
     ]
 

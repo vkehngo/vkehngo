@@ -1,4 +1,4 @@
-import image from '../../assets/image.jpg'
+import image from '../../assets/image.webp'
 
 const HeroSection = () => {
     return (
