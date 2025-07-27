@@ -35,7 +35,7 @@ const EventsPage = () => {
         return () => ctx.revert(); // Clean up animations on unmount
     }, []);
 
-
+    //@ts-ignore
     const handleNavigate = (id) => {
         navigate(`/events/${id}`);
         setTimeout(() => {
