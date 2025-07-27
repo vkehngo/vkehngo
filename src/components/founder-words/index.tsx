@@ -12,7 +12,7 @@ const FounderWords = () => {
                 <div>
                     <p className="text-textPrimary text-2xl md:text-4xl font-bold mb-1">Vijay Gaur</p>
                     <p className="text-textPrimary text-sm">President, Viklang Kendra & Education Hub</p>
-                    <p className="mt-4 text-lg text-textPrimary text-justify">I was handicapped by birth and under difficult circumstances I managed to complete my studies and become Charted accountant then completed my LLB.  I used to help many of the people who are disabled and looking for employment and kids whose paents are not able to afford education to their child, I give them free of cost education and mid day meals. and in 2022 I have started my own NGO "VKEH" with my team members and my aim is to setup multiple free education and employment set up for disabled person and kids.</p>
+                    <p className="mt-4 text-lg text-textPrimary text-justify">I was handicapped by birth and under difficult circumstances I managed to complete my masters in Economics and then I completed my LLB Degree. I used to help many of the people who are disabled and looking for employment and kids whose paents are not able to afford education to their child, I give them free of cost education and mid day meals. and in 2022 I have started my own NGO "VKEH" with my team members and my aim is to setup multiple free education and employment set up for disabled person and kids.</p>
                 </div>
             </div>
         </div>
