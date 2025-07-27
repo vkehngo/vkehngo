@@ -12,10 +12,12 @@ import VideosPage from "./screens/videosPage";
 import { FaYoutube } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div className="bg-white">
       <BrowserRouter>
+      <ScrollToTop />
         <div className="w-full h-[35px] md:h-[35px] relative bg-secondary flex items-center justify-between px-4">
           <p className="text-white">Viklang Kendra & Education Hub</p>
           <div className="flex items-center justify-end gap-2">

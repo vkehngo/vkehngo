@@ -113,7 +113,7 @@ const AboutUsPage = () => {
                     </div>
                     <div>
                         <img src="/certificate.webp"
-                            className="h-[30rem]"
+                            className="md:h-[30rem]"
                             alt="" />
                     </div>
                 </div>

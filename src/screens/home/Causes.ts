@@ -7,9 +7,9 @@ export const cardData = [
     },
     {
         title: "Employment",
-        des: "We empower disabled individuals with vocational training and job opportunities to lead dignified lives..",
+        des: "At our NGO, we believe that disability is not inability. To support this vision, we’ve set up a small-scale production...",
         img: "/empImage.webp",
-        longDes: "Employment is key to independence and self-respect, and our NGO is dedicated to creating sustainable job opportunities for disabled and underprivileged individuals. We provide extensive vocational training programs such as tailoring, computer literacy, handicrafts, and skill-based workshops tailored to individual strengths. By collaborating with local businesses and industries, we connect our trainees to meaningful employment that values their capabilities. We believe that a disability should never be a barrier to success, and through our continuous support, mentorship, and awareness campaigns, we ensure that every individual has the chance to earn a livelihood, achieve financial stability, and live a life filled with dignity and pride."
+        longDes: "At our NGO, we believe that disability is not inability. To support this vision, we’ve set up a small-scale production unit where differently-abled individuals are trained and employed to craft eco-friendly paper products such as plates, cups, and food packaging items. These products are then sold in the market, and the revenue generated goes directly back to them in the form of fair salaries, helping them gain financial independence, dignity, and confidence. Every product they create is not just eco-friendly — it’s hope made by hand."
     },
     {
         title: "Food Donation",

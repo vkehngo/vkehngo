@@ -17,6 +17,7 @@ import { useWindowSize } from "../../lib/useWindowSize";
 import Impact from "../../components/Impact";
 import Glimpses from "../../components/Glimpses";
 import { cardData } from "./Causes";
+import TextType from "../../components/ui/TextType";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,7 +97,14 @@ const Home = () => {
                     <img src="/hero.webp" alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="relative md:absolute inset-0 flex flex-col items-center justify-center bg-white w-full md:w-[35%] md:left-[5%] md:top-[5%] h-[90%] p-5 md:rounded-2xl ">
-                    <p className="mb-5 text-4xl font-bold text-primary leading-tight text-center">Hope Begins with Opportunity</p>
+                    <TextType
+                        text={["Empowering Children with Education", "Serving Hope Through Free Meals", "Creating Jobs for the Differently-Abled"]}
+                        typingSpeed={100}
+                        pauseDuration={1500}
+                        showCursor={false}
+                        cursorCharacter="|"
+                        className="mb-5 text-4xl font-bold text-primary leading-tight text-center"
+                    />
                     <p className="mb-12 text-xl text-center">We serve the disabled and underprivileged with free education, mid-day meals, and job training — turning struggle into strength.</p>
                     <button
                         onClick={() => setShowDonatePopup(true)}
@@ -184,8 +192,8 @@ const Home = () => {
                                 </div>
 
                                 {/* UPI ID */}
-                                <p className="text-lg font-medium text-gray-800 mb-1">
-                                    <span className="font-bold">UPI ID:</span> yespay.ypbsm000001724@yesbankltd
+                                <p className="text-sm md:text-lg break-all font-medium text-gray-800 mb-1 ">
+                                    <span className="font-bold">UPI ID:</span> <br /> yespay.ypbsm000001724@yesbankltd
                                 </p>
                                 <p className="text-sm text-gray-500 mb-2">
                                     Scan this QR through Your UPI App
@@ -309,10 +317,18 @@ const Home = () => {
             <div className="fade-up">
                 <Glimpses />
             </div>
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                    <img src="/brand-2.webp" alt="" className="w-full h-28 object-contain" />
-                    <img src="/brand-3.webp" alt="" className="w-full h-28 object-contain" />
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-2 sm:py-12 lg:py-10 fade-up">
+                <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
+                    They Believed in Our Mission
+                </p>
+                <p className="mb-1 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
+                    We are proud to be supported by these incredible organizations that believe in us.
+                </p>
+                <div className="grid grid-cols-4 md:grid-cols-4 gap-1">
+                    <img src="/l1.png" alt="" className="w-full h-28 md:h-36 object-contain" />
+                    <img src="/l2.png" alt="" className="w-full h-28 md:h-36 object-contain" />
+                    <img src="/l3.png" alt="" className="w-full h-28 md:h-36 object-contain" />
+                    <img src="/l4.png" alt="" className="w-full h-28 md:h-36 object-contain" />
                 </div>
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">

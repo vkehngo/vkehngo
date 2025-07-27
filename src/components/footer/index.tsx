@@ -122,7 +122,7 @@ export const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="space-y-2 text-sm">
+                        <div className="space-y-2 text-sm col-span-2 md:col-span-1">
                             <p className="text-base font-bold tracking-wide text-white">
                                 Visit Our Ngo
                             </p>

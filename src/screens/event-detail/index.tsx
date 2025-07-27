@@ -20,7 +20,10 @@ const EventDetailsPage = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const event: EventProp | undefined = eventData.find(e => e.id === Number(id));
-     useLayoutEffect(() => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             gsap.utils.toArray<HTMLElement>(".fade-up").forEach(el => {
                 gsap.from(el, {

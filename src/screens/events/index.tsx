@@ -6,10 +6,13 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+
 gsap.registerPlugin(ScrollTrigger);
+
 
 const EventsPage = () => {
     const navigate = useNavigate();
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -22,18 +25,31 @@ const EventsPage = () => {
                     scrollTrigger: {
                         trigger: el,
                         start: "top 85%",
-                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                        toggleActions: "play none none none", // 👉 This prevents repeat on scroll up/down
                     },
                 });
             });
         });
 
+
         return () => ctx.revert(); // Clean up animations on unmount
     }, []);
 
+
+    const handleNavigate = (id) => {
+        navigate(`/events/${id}`);
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }, 0);
+    };
+
+
     return (
         <div>
-            <BreadcrumbBanner title="Events" img="/events.webp"/>
+            <BreadcrumbBanner title="Events" img="/events.webp" />
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Events & Drives That Inspire Change
@@ -61,7 +77,7 @@ const EventsPage = () => {
                                         <div className="px-6 py-4 pt-0">
                                             <button data-ripple-light="true"
                                                 type="button"
-                                                onClick={() => navigate(`/events/${data.id}`)}
+                                                onClick={() => handleNavigate(data.id)}
                                                 className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
                                                 Read More
                                             </button>
@@ -76,5 +92,6 @@ const EventsPage = () => {
         </div>
     )
 };
+
 
 export default EventsPage;

@@ -1,17 +1,18 @@
 import { Card, CardContent } from "../ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const AboutUs = () => {
 
     const featuresList = [
-        {image:'2.webp'},
-        {image:'3.webp'},
-        {image:'4.webp'},
-        {image:'5.webp'},
-        {image:'/galleryImages/5.webp'},
-        {image:'/galleryImages/6.webp'},
-        {image:'/galleryImages/7.webp'},
-        {image:'/galleryImages/8.webp'},
+        { image: '2.webp' },
+        { image: '3.webp' },
+        { image: '4.webp' },
+        { image: '5.webp' },
+        { image: '/galleryImages/5.webp' },
+        { image: '/galleryImages/6.webp' },
+        { image: '/galleryImages/7.webp' },
+        { image: '/galleryImages/8.webp' },
     ];
 
     return (
@@ -39,7 +40,13 @@ const AboutUs = () => {
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 pt-10 sm:pt-12 lg:pt-10">
                 <div className="flex items-center justify-center">
-                    <Carousel className="px-4 mx-auto w-[78%] md:w-2xl lg:w-5xl sm:px-6 lg:px-1">
+                    <Carousel
+                        plugins={[
+                            Autoplay({
+                                delay: 2000,
+                            }),
+                        ]}
+                        className="px-4 mx-auto w-[78%] md:w-2xl lg:w-5xl sm:px-6 lg:px-1">
                         <CarouselContent className="-ml-1">
                             {featuresList.map((feature, index) => (
                                 <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
