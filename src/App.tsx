@@ -19,7 +19,7 @@ const App = () => {
       <BrowserRouter>
       <ScrollToTop />
         <div className="w-full h-[35px] md:h-[35px] relative bg-secondary flex items-center justify-between px-4">
-          <p className="text-white">Viklang Kendra & Education Hub</p>
+          <p className="text-sm md:text-md text-white">Viklang Kendra & Education Hub</p>
           <div className="flex items-center justify-end gap-2">
             <a href="https://www.youtube.com/channel/UCwaEY6vypWr5tMeDj6XodwA" target="_blank" rel="noopener noreferrer">
               <FaYoutube color="white" size={20} />
