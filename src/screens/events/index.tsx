@@ -36,10 +36,10 @@ const EventsPage = () => {
             <BreadcrumbBanner title="Events" img="/events.webp"/>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Events
+                    Events & Drives That Inspire Change
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    While we serve in countless ways, we've focused our efforts in seven key areas to maximise our impact. These encompass some of the bharat most critical humanitarian needs and provide an opportunity for our members to transform the Bharat.
+                    Explore our on-ground activities that bring communities together and create lasting impact.
                 </p>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-12">

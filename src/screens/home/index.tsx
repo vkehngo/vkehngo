@@ -6,7 +6,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import AboutUs from "../../components/about-us";
 import MissionVision from "../../components/mission-vision";
 import OurVideos from "../../components/our-videos";
-import aboutImage from '/banner-3.webp'
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
 import Swal from "sweetalert2";
@@ -138,10 +137,10 @@ const Home = () => {
                         </button>
                         <a href="https://forms.gle/6dwNGXmFbBVxbmy5A" target="_blank">
                             <button
-                            type="button"
-                            className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
-                            become a volunteer
-                        </button>
+                                type="button"
+                                className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                                become a volunteer
+                            </button>
                         </a>
                     </div>
                 </section>
@@ -153,30 +152,67 @@ const Home = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-[99999]"
+                            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-[99999] p-4"
                         >
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.8, opacity: 0 }}
-                                className="bg-white rounded-2xl shadow-lg max-w-md w-full p-6 relative mx-5"
+                                className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative text-center"
                             >
                                 <button
                                     onClick={() => setShowDonatePopup(false)}
-                                    className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
+                                    className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors text-2xl"
                                 >
                                     ✕
                                 </button>
-                                <h2 className="text-2xl font-bold text-center text-primary mb-4">Support Our Cause</h2>
-                                <p className="text-gray-600 text-center mb-4">Scan the QR code below to donate and make an impact.</p>
-                                <div className="flex justify-center mb-2">
-                                    <img src="/QR.svg" alt="Donation QR Code" className="w-48 h-48 rounded-lg border" />
+
+                                <h2 className="text-3xl font-extrabold text-primary mb-2 tracking-wide">
+                                    Support Our Cause
+                                </h2>
+                                <p className="text-gray-500 text-base mb-6">
+                                    We accept donations via <span className="font-medium">UPI/Bank Transfer</span>.
+                                </p>
+
+                                {/* QR Code */}
+                                <div className="flex justify-center mb-3">
+                                    <img
+                                        src="/QR.svg"
+                                        alt="Donation QR Code"
+                                        className="w-44 h-44 rounded-xl border border-gray-200 shadow-md hover:scale-105 transition-transform"
+                                    />
                                 </div>
-                                <p className="text-xl font-bold text-center text-primary">Viklang Kendra & Education Hub</p>
+
+                                {/* UPI ID */}
+                                <p className="text-lg font-medium text-gray-800 mb-1">
+                                    <span className="font-bold">UPI ID:</span> yespay.ypbsm000001724@yesbankltd
+                                </p>
+                                <p className="text-sm text-gray-500 mb-2">
+                                    Scan this QR through Your UPI App
+                                </p>
+
+                                {/* NGO Name */}
+                                <p className="text-xl font-bold text-primary mb-5">
+                                    Viklang Kendra & Education Hub
+                                </p>
+
+                                {/* Bank Details */}
+                                <div className="bg-gray-50 rounded-xl p-4 shadow-inner">
+                                    <h3 className="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">
+                                        Bank Details
+                                    </h3>
+                                    <div className="space-y-1 text-gray-700">
+                                        <p><span className="font-semibold">Account No :</span> 2246587680</p>
+                                        <p><span className="font-semibold">IFSC Code :</span> KKBK0004264</p>
+                                        <p><span className="font-semibold">Bank Name :</span> Kotak Mahindra Bank</p>
+                                    </div>
+                                </div>
                             </motion.div>
                         </motion.div>
                     )}
                 </AnimatePresence>
+
+
             </div>
             <div className="fade-up"><Impact /></div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
@@ -201,8 +237,8 @@ const Home = () => {
                             cardData.map((data, index) => {
                                 return (
                                     <div className="relative flex w-full flex-col group rounded-xl bg-white bg-clip-border border" key={index}>
-                                        <div className="relative mx-4 mt-4 group-hover:-mt-6 group-hover:mb-6 transition-all ease-in-out duration-300 h-40 overflow-hidden rounded-xl shadow-lg">
-                                            <img src={data.img} alt="" className=" object-bottom" />
+                                        <div className="relative mx-4 mt-4 group-hover:-mt-6 group-hover:mb-6 transition-all ease-in-out duration-300 h-52 overflow-hidden rounded-xl shadow-lg">
+                                            <img src={data.img} alt="" className="w-full h-full object-cover object-bottom" />
                                         </div>
                                         <div className="px-6 py-3">
                                             <h5 className="mb-1 block text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-textPrimary">
@@ -241,13 +277,13 @@ const Home = () => {
             <section className="w-full relative py-14 lg:pb-20 px-5 lg:px-0 bg-black fade-up" id="about">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-40"
-                    style={{ backgroundImage: `url(${aboutImage})` }}
+                    style={{ backgroundImage: `url(/donate.webp)` }}
                 ></div>
                 <div className="relative z-10 rounded-2xl mx-auto flex flex-col gap-y-5 justify-center items-center">
                     <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-xl lg:max-w-3xl mx-auto font-bold text-white text-center m-5">
                         Are You Like To Help People Across The World Through Social Causes ?
                     </h3>
-                    <button  onClick={() => setShowDonatePopup(true)} data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                    <button onClick={() => setShowDonatePopup(true)} data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
                         Make Your Contribution
                     </button>
                 </div>
@@ -256,7 +292,7 @@ const Home = () => {
             <section className="fade-up w-full relative py-14 lg:pb-20 px-5 lg:px-0 bg-black fade-up" id="about">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-40"
-                    style={{ backgroundImage: `url(${aboutImage})` }}
+                    style={{ backgroundImage: `url(/volunteer.webp)` }}
                 ></div>
                 <div className="relative z-10 rounded-2xl mx-auto flex flex-col gap-y-5 justify-center items-center">
                     <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-xl lg:max-w-3xl mx-auto font-bold text-white text-center m-5">
@@ -264,8 +300,8 @@ const Home = () => {
                     </h3>
                     <a href="https://forms.gle/6dwNGXmFbBVxbmy5A" target="_blank">
                         <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
-                        Become a Volunteer
-                    </button>
+                            Become a Volunteer
+                        </button>
                     </a>
                 </div>
             </section>

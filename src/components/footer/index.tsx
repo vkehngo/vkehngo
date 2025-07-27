@@ -63,7 +63,7 @@ export const Footer = () => {
                                         onClick={handleLinkClick}
                                         className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
                                     >
-                                        Event
+                                        Events
                                     </Link>
                                 </li>
                                 <li>
@@ -97,55 +97,27 @@ export const Footer = () => {
                         </div>
                         <div>
                             <p className="font-bold tracking-wide text-white text-lg">
-                                Contact
+                                Join
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://forms.gle/6dwNGXmFbBVxbmy5A"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
                                     >
-                                        Home
+                                        Become A Volunteer
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://forms.gle/HXg91TvVSJajqWFH7"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
                                     >
-                                        About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/"
-                                        className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
-                                    >
-                                        Event
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/"
-                                        className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
-                                    >
-                                        Videos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/"
-                                        className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
-                                    >
-                                        Gallery
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/"
-                                        className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
-                                    >
-                                        Contact
+                                        Careers
                                     </a>
                                 </li>
                             </ul>

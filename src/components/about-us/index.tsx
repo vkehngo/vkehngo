@@ -8,6 +8,10 @@ const AboutUs = () => {
         {image:'3.webp'},
         {image:'4.webp'},
         {image:'5.webp'},
+        {image:'/galleryImages/5.webp'},
+        {image:'/galleryImages/6.webp'},
+        {image:'/galleryImages/7.webp'},
+        {image:'/galleryImages/8.webp'},
     ];
 
     return (
