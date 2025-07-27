@@ -1,12 +1,12 @@
 export const videosData = [
     {
-        title: "Prani Mitra Awardees of the year 2020",
-        link: "https://www.youtube.com/embed/5ZEh6ouWaR0",
+        title: "Foreigner&#39;s visit to our NGO | 8th March, 2025",
+        link: "https://www.youtube.com/embed/ui84xV7U4BM",
         type: "youtube"
     },
     {
-        title: "Wetland Video Hindi",
-        link: "https://www.youtube.com/embed/1cPn909lxTA",
+        title: "Foreigners Visit to our NGO | 12th March, 2025",
+        link: "https://www.youtube.com/embed/gyjsATjdSEc",
         type: "youtube"
     },
     {

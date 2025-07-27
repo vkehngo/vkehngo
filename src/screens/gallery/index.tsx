@@ -1,13 +1,37 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const GalleryPage = () => {
+
+     useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray<HTMLElement>(".fade-up").forEach(el => {
+                gsap.from(el, {
+                    y: 150,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                    },
+                });
+            });
+        });
+
+        return () => ctx.revert(); // Clean up animations on unmount
+    }, []);
+
     const items = [
         '/galleryImages/4.webp',
-        '/galleryImages/5.webp',
         '/galleryImages/6.webp',
         '/galleryImages/7.webp',
         '/galleryImages/8.webp',
@@ -20,9 +44,6 @@ const GalleryPage = () => {
         '/galleryImages/12.webp',
         '/galleryImages/13.webp',
         '/galleryImages/14.webp',
-        '/galleryImages/15.webp',
-        '/galleryImages/16.webp',
-        '/galleryImages/17.webp',
         '/galleryImages/18.webp',
         '/galleryImages/21.webp',
         '/galleryImages/22.webp',
@@ -45,14 +66,14 @@ const GalleryPage = () => {
 
     return (
         <div>
-            <BreadcrumbBanner title="Gallery" />
+            <BreadcrumbBanner title="Gallery" img="/banner-2.webp"/>
 
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Our Gallery
+                    Glimpses of Hope in Action
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
+                    Browse through moments captured during our events, educational sessions, food drives, and community outreach — each frame telling a story of impact and compassion.
                 </p>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

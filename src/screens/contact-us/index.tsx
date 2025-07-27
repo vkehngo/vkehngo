@@ -1,10 +1,14 @@
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import Swal from "sweetalert2";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 const ContactPage = () => {
@@ -13,6 +17,26 @@ const ContactPage = () => {
 
     const [loading, setLoading] = useState<boolean>(false);
     const formRef = useRef<HTMLFormElement>(null);
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray<HTMLElement>(".fade-up").forEach(el => {
+                gsap.from(el, {
+                    y: 150,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                    },
+                });
+            });
+        });
+
+        return () => ctx.revert(); // Clean up animations on unmount
+    }, []);
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -57,8 +81,8 @@ const ContactPage = () => {
 
     return (
         <div>
-            <BreadcrumbBanner title="Contact Us" />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <BreadcrumbBanner title="Contact Us" img="/empImage.webp" />
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <div className="flex justify-center w-full mb-5">
                     <div className="inline-flex items-center gap-2 border rounded-lg px-2 py-2">
                         {tabs.map((tab) => (
@@ -73,21 +97,23 @@ const ContactPage = () => {
                 </div>
                 <div>
                     <p className="text-primary text-4xl sm:text-5xl font-semibold leading-tight text-center italic border-b-2 border-secondary sm:mx-10 pb-5 mb-5">{selected === 'VOLUNTEERN' ? 'Volunteers are our everyday heroes.' : 'Build Your Career At Viklang Kendra'}</p>
-                    <p className="mb-2 text-textSecondary lg:mx-16 text-md sm:text-xl font-normal leading-tight text-center">Join Viklang Kendra & Education Hub</p>
-                    <p className="text-gray-500 lg:mx-16 text-xs sm:text-lg font-normal leading-tight text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex unde autem magni quaerat beatae omnis nostrum facere soluta sequi. Natus?</p>
+                    <p className="mb-2 text-textSecondary lg:mx-16 text-md sm:text-xl font-normal leading-tight text-center">{selected === 'VOLUNTEER' ? 'Join Viklang Kendra & Education Hub' : "Build a Fulfilling Career at Viklang Kendra"}</p>
+                    <p className="text-gray-500 lg:mx-16 text-xs sm:text-lg font-normal leading-tight text-center">{selected === 'VOLUNTEER' ? "Join Viklang Kendra and contribute to bringing positive change in the lives of those who need it most. As a volunteer, you'll have the opportunity to help underprivileged children access quality education and nutritious meals. Be part of initiatives that empower disabled individuals by providing them with meaningful employment and skill-building opportunities." : "At Viklang Kendra, your work goes beyond a job—it’s a mission. We are dedicated to uplifting poor children by ensuring they receive education and proper nourishment, while also championing equal employment opportunities for disabled individuals. Joining our team means utilizing your skills to create real-world impact and empower communities in need. Be part of a passionate team committed to making lasting change. Grow your career while making a difference."}</p>
                     <div className="flex justify-center items-center my-5">
-                        <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
-                            {selected === 'VOLUNTEERN' ? 'become a volunteer' : "Join Team"}
+                        <a href={selected === 'VOLUNTEER' ? "https://forms.gle/6dwNGXmFbBVxbmy5A" : "https://forms.gle/HXg91TvVSJajqWFH7"} target="_blank">
+                            <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-3 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                            {selected === 'VOLUNTEER' ? 'become a volunteer' : "Join Team"}
                         </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Get In Touch
+                    Let’s Build Change Together
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsum consequuntur consequatur, esse quis inventore magnam in iure impedit neque? Vel iste provident nobis unde?
+                    Interested in volunteering, donating, or learning more about our work? Reach out — we’d love to connect with you.
                 </p>
                 <div className="w-full justify-start items-start xl:gap-12 gap-5 grid lg:grid-cols-2 grid-cols-1">
                     <form id="contactForm" onSubmit={onSubmit} ref={formRef} className="border p-4 rounded-lg border-primary lg:order-1 order-2">

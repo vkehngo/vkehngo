@@ -27,7 +27,7 @@ const MissionVision = () => {
                 </div>
                 <div className="w-full rounded-2xl aspect-video md:aspect-auto">
                     <img src={
-                        selected === 'Mission' ? "https://nititantra.com/wp-content/uploads/2022/08/0.25794500_1645773147_istock-870402320.webp" : "https://sc0.blr1.digitaloceanspaces.com/large/862178-63119-sktxytvhxi-1500027620.webp"} alt="" className="object-cover w-full h-full rounded-2xl" />
+                        selected === 'Mission' ? "https://nititantra.com/wp-content/uploads/2022/08/0.25794500_1645773147_istock-870402320.jpg" : "https://sc0.blr1.digitaloceanspaces.com/large/862178-63119-sktxytvhxi-1500027620.jpg"} alt="" className="object-cover w-full h-full rounded-2xl" />
                 </div>
             </div>
         </div>

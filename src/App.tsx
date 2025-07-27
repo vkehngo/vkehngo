@@ -19,9 +19,15 @@ const App = () => {
         <div className="w-full h-[35px] md:h-[35px] relative bg-secondary flex items-center justify-between px-4">
           <p className="text-white">Viklang Kendra & Education Hub</p>
           <div className="flex items-center justify-end gap-2">
-            <FaYoutube color="white" size={20}/>
-            <AiFillInstagram color="white" size={20}/>
-            <FaFacebookSquare color="white" size={20}/>
+            <a href="https://www.youtube.com/channel/UCwaEY6vypWr5tMeDj6XodwA" target="_blank" rel="noopener noreferrer">
+              <FaYoutube color="white" size={20} />
+            </a>
+            <a href="https://www.instagram.com/vkeh.offical/" target="_blank" rel="noopener noreferrer">
+              <AiFillInstagram color="white" size={20} />
+            </a>
+            <a href="https://www.facebook.com/vkeh.offical/" target="_blank" rel="noopener noreferrer">
+              <FaFacebookSquare color="white" size={20} />
+            </a>
           </div>
         </div>
         <Navbar />

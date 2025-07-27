@@ -1,14 +1,40 @@
+import { useLayoutEffect } from "react";
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import { eventData } from "./eventsData";
 import './style.css';
 import { useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const EventsPage = () => {
     const navigate = useNavigate();
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray<HTMLElement>(".fade-up").forEach(el => {
+                gsap.from(el, {
+                    y: 150,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                    },
+                });
+            });
+        });
+
+        return () => ctx.revert(); // Clean up animations on unmount
+    }, []);
+
     return (
         <div>
-            <BreadcrumbBanner title="Events" />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <BreadcrumbBanner title="Events" img="/events.webp"/>
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Events
                 </p>
@@ -20,7 +46,7 @@ const EventsPage = () => {
                         {
                             eventData.map((data, index) => {
                                 return (
-                                    <div className="relative flex w-full flex-col group rounded-xl bg-white bg-clip-border border" key={index}>
+                                    <div className="relative flex w-full flex-col group rounded-xl bg-white bg-clip-border border fade-up" key={index}>
                                         <div className="relative mx-4 mt-4 group-hover:-mt-6 group-hover:mb-6 transition-all ease-in-out duration-300 h-40 overflow-hidden rounded-xl shadow-lg">
                                             <img src={data.image} alt="" className="w-full h-full object-cover" />
                                         </div>

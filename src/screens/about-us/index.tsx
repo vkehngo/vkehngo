@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import FounderWords from "../../components/founder-words";
 import MissionVision from "../../components/mission-vision";
@@ -9,24 +10,63 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "../../components/ui/carousel"
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutUsPage = () => {
 
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray<HTMLElement>(".fade-up").forEach(el => {
+                gsap.from(el, {
+                    y: 150,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                    },
+                });
+            });
+        });
+
+        return () => ctx.revert(); // Clean up animations on unmount
+    }, []);
+
     const timelineData = [
         {
-            date: "Dec 2020",
-            title: "Donec porta enim vel",
-            des: "Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+            date: "2021",
+            title: "Academic Foundation Laid",
+            des: "Completed Master’s degree, marking the beginning of a lifelong pursuit of knowledge and self-reliance."
         },
         {
-            date: "Jun 2019",
-            title: "Aliquam sit amet nunc ut",
-            des: "Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui. Donec mollis turpis eget egestas sodales."
+            date: "2002 – 2015",
+            title: "Overcoming Challenges",
+            des: "Faced and navigated personal and societal barriers while building a strong professional foundation — laying the groundwork for future service."
         },
         {
-            date: "Jan 2016",
-            title: "Pellentesque habitant morbi",
-            des: "Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim."
+            date: "2020",
+            title: "Serving the Needy Individually",
+            des: "Started helping underprivileged children with free education and meals, and supported disabled individuals in securing jobs — purely through personal effort and compassion."
+        },
+        {
+            date: "2022",
+            title: "Advocate Degree & VKEH Established",
+            des: "Completed LLB and founded Viklang Kendra & Education Hub (VKEH) with a mission to create structured support systems for the differently-abled and underprivileged children."
+        },
+        {
+            date: "2023",
+            title: "First CSR Funding Received",
+            des: "A breakthrough year — Viklang Kendra & Education Hub received its first CSR funding, enabling the expansion of education programs and food drives."
+        },
+        {
+            date: "2025",
+            title: "Recognition & Expansion",
+            des: "Hosted NGO visit by Richard from Knohow and his team — strengthening global ties and building credibility."
         },
     ]
 
@@ -44,7 +84,7 @@ const AboutUsPage = () => {
             <BreadcrumbBanner
                 title="About Us"
             />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="mb-7 text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Viklang Kendra & Education Hub
                 </p>
@@ -79,16 +119,15 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-100">
-                <MissionVision />
+            <div className="fade-up">
+                <FounderWords />
             </div>
-            <FounderWords />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
                     Meet Our Team - The Pillars of VKEH
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                   A passionate team empowering lives through education and inclusion.
+                    A passionate team empowering lives through education and inclusion.
                 </p>
                 <div className="flex items-center justify-center">
                     <Carousel className="px-4 mx-auto w-[78%] md:w-2xl lg:w-5xl sm:px-6 lg:px-1">
@@ -125,12 +164,12 @@ const AboutUsPage = () => {
                     </Carousel>
                 </div>
             </div>
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Timeline
+                    Our Journey of Grit & Giving
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sed itaque tempore ut rem animi inventore voluptas incidunt exercitationem dolores.
+                    From personal struggles to building a movement — explore key milestones that shaped the vision and growth of VKEH, driven by purpose, perseverance, and people.
                 </p>
                 <div className="relative col-span-12 md:px-4 space-y-6 sm:col-span-9">
                     <div className="col-span-12 space-y-6 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">

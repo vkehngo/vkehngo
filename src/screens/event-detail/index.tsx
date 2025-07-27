@@ -1,7 +1,12 @@
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import { useNavigate, useParams } from "react-router-dom";
 import { eventData } from "../events/eventsData";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
+
+gsap.registerPlugin(ScrollTrigger);
 interface EventProp {
     id: number;
     title: string;
@@ -15,6 +20,25 @@ const EventDetailsPage = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const event: EventProp | undefined = eventData.find(e => e.id === Number(id));
+     useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray<HTMLElement>(".fade-up").forEach(el => {
+                gsap.from(el, {
+                    y: 150,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                    },
+                });
+            });
+        });
+
+        return () => ctx.revert(); // Clean up animations on unmount
+    }, []);
 
     if (!event) {
         return <div className="px-4 py-10 text-center text-red-500">Event not found.</div>;
@@ -23,7 +47,7 @@ const EventDetailsPage = () => {
     return (
         <div>
             <BreadcrumbBanner title='Highlights from Our Events & Initiatives' />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                     <div className=" col-span-3">
                         <div className="w-full md:w-[90%] h-[300px] md:h-[400px]">
@@ -33,10 +57,10 @@ const EventDetailsPage = () => {
                             <div className="col-span-2">
                                 <p className="bg-primary inline-block py-2 px-3 rounded-lg text-white my-4">{event.date}</p>
                                 <p className="font-semibold uppercase text-lg md:text-2xl text-textPrimary">{event.title}</p>
-                                <p className="font-normal text-md md:text-lg text-textSecondary text-justify">{event.des}</p>
+                                <p className="font-normal text-md md:text-lg text-textSecondary text-justify fade-up">{event.des}</p>
                             </div>
                             <iframe
-                                className="w-full h-full rounded-lg aspect-[9/16]"
+                                className="w-full h-full rounded-lg aspect-[9/16] fade-up"
                                 src={event.video}
                                 title='ttt'
                                 frameBorder="0"

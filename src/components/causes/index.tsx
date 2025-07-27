@@ -1,23 +1,5 @@
 const Causes = () => {
 
-    const cardData = [
-        {
-            title: "Education",
-            des: "Education is a fundamental right, and it's crucial for the growth and development of every indi..",
-            img: "/galleryImages/25.webp"
-        },
-        {
-            title: "Employment",
-            des: "Get a free health checkup at our clinic! Our team of experienced doctors and nurses will provide..",
-            img: "/empImage.webp"
-        },
-        {
-            title: "Food Donation",
-            des: "We must take action to save our environment before it's too late. We need to reduce our..",
-            img: "/galleryImages/24.webp"
-        },
-    ]
-
 
     return (
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10">
