@@ -1,7 +1,6 @@
 import { useLayoutEffect } from "react";
 import BreadcrumbBanner from "../../components/breadcrumb-banner";
 import FounderWords from "../../components/founder-words";
-import MissionVision from "../../components/mission-vision";
 import { Card, CardContent } from "../../components/ui/card"
 import {
     Carousel,
