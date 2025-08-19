@@ -6,6 +6,7 @@ import { IoClose } from "react-icons/io5";
 import MobileNavbar from '../mobile-navbar/MobileNavbar';
 import { Link } from 'react-router-dom';
 
+// @ts-ignore
 const Navbar = ({ setShowDonatePopupp }) => {
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -14,6 +15,7 @@ const Navbar = ({ setShowDonatePopupp }) => {
     }
 
     // Function to scroll to top
+    // @ts-ignore
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
