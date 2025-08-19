@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLayoutEffect, useRef, useState } from "react";
 import Swal from "sweetalert2";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaPhoneVolume } from "react-icons/fa";
 import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -177,7 +177,7 @@ const ContactPage = () => {
                                     <FaLocationDot size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    KH No.435, Gali No.2, Village Basai, Gurugram, Haryana 122001
+                                    Plot No.2 Aanand Residence, Laxman Vihar, Phase -2 Gurgaon HR 122001
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -185,7 +185,15 @@ const ContactPage = () => {
                                     <FaPhoneAlt size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    +91 9873653629
+                                    +91 7011922762
+                                </p>
+                            </div>
+                            <div className="flex justify-center items-center gap-2">
+                                <div className="p-2 bg-white rounded-full text-textPrimary shadow-md">
+                                    <FaPhoneVolume size={20} />
+                                </div>
+                                <p className="text-textSecondary text-base font-normal leading-relaxed">
+                                    0124 - 2252630
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">

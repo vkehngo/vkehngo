@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -6,7 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import AboutUs from "../../components/about-us";
 import MissionVision from "../../components/mission-vision";
 import OurVideos from "../../components/our-videos";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaPhoneVolume } from "react-icons/fa";
 import { MdEmail, MdOutlineAccessTimeFilled } from "react-icons/md";
 import Swal from "sweetalert2";
 import { FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
@@ -21,12 +21,15 @@ import TextType from "../../components/ui/TextType";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home = () => {
+const Home = ({ showDonatePopupp, setShowDonatePopupp }) => {
     const [loading, setLoading] = useState<boolean>(false);
     const formRef = useRef<HTMLFormElement>(null);
     const [open, setOpen] = useState(items[0].id);
-    const [showDonatePopup, setShowDonatePopup] = useState(false);
     const [selectedCause, setSelectedCause] = useState<number | null>(null);
+
+    // Use the prop state instead of creating a separate local state
+    const showDonatePopup = showDonatePopupp;
+    const setShowDonatePopup = setShowDonatePopupp;
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -39,13 +42,13 @@ const Home = () => {
                     scrollTrigger: {
                         trigger: el,
                         start: "top 85%",
-                        toggleActions: "play none none none", // 👈 This prevents repeat on scroll up/down
+                        toggleActions: "play none none none",
                     },
                 });
             });
         });
 
-        return () => ctx.revert(); // Clean up animations on unmount
+        return () => ctx.revert();
     }, []);
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -88,23 +91,25 @@ const Home = () => {
             setLoading(false);
         }
     };
+
     return (
         <div>
-            {/* <SwipeCarousel /> */}
             <div className="w-full relative bg-black md:flex">
                 <div className="w-[100%] hidden md:block md:w-[20%] bg-[#0072CE]  h-[250px] md:h-[550px]"></div>
                 <div className="w-[100%] md:w-[80%] h-[250px] md:h-[550px]">
                     <img src="/hero.webp" alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="relative md:absolute inset-0 flex flex-col items-center justify-center bg-white w-full md:w-[35%] md:left-[5%] md:top-[5%] h-[90%] p-5 md:rounded-2xl ">
-                    <TextType
-                        text={["Empowering Children with Education", "Serving Hope Through Free Meals", "Creating Jobs for the Differently-Abled"]}
-                        typingSpeed={100}
-                        pauseDuration={1500}
-                        showCursor={false}
-                        cursorCharacter="|"
-                        className="mb-5 text-4xl font-bold text-primary leading-tight text-center"
-                    />
+                    <div className="h-32 md:h-44 xl:h-24">
+                        <TextType
+                            text={["Empowering Children with Education", "Serving Hope Through Free Meals", "Creating Jobs for the Differently-Abled"]}
+                            typingSpeed={100}
+                            pauseDuration={1500}
+                            showCursor={false}
+                            cursorCharacter="|"
+                            className="mb-5 text-3xl md:text-4xl font-bold text-primary leading-tight text-center"
+                        />
+                    </div>
                     <p className="mb-12 text-xl text-center">We serve the disabled and underprivileged with free education, mid-day meals, and job training — turning struggle into strength.</p>
                     <button
                         onClick={() => setShowDonatePopup(true)}
@@ -219,8 +224,6 @@ const Home = () => {
                         </motion.div>
                     )}
                 </AnimatePresence>
-
-
             </div>
             <div className="fade-up"><Impact /></div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
@@ -228,7 +231,7 @@ const Home = () => {
                     Change begins with us all
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    We believe that corporate partnerships are not only a way to help brands meet their CSR objectives, but also create sustainable impact for India’s children.
+                    We believe that corporate partnerships are not only a way to help brands meet their CSR objectives, but also create sustainable impact for India's children.
                 </p>
             </div>
             <img src="/ngoimage.webp" alt="" className="w-full -mt-16 fade-up" />
@@ -333,10 +336,10 @@ const Home = () => {
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-10 fade-up">
                 <p className="text-primary text-4xl sm:text-5xl font-bold leading-tight text-center">
-                    Let’s Build Change Together
+                    Let's Build Change Together
                 </p>
                 <p className="mb-7 text-textSecondary lg:mx-16 text-sm sm:text-lg font-normal leading-tight text-center">
-                    Interested in volunteering, donating, or learning more about our work? Reach out — we’d love to connect with you.
+                    Interested in volunteering, donating, or learning more about our work? Reach out — we'd love to connect with you.
                 </p>
                 <div className="w-full justify-start items-start xl:gap-12 gap-5 grid lg:grid-cols-2 grid-cols-1">
                     <form id="contactForm" onSubmit={onSubmit} ref={formRef} className="border p-4 rounded-lg border-primary lg:order-1 order-2">
@@ -358,7 +361,7 @@ const Home = () => {
                                     name="phone"
                                     inputMode="numeric"
                                     pattern="[0-9]{10}"
-                                    placeholder="Enter your 10 digit no."
+                                    placeholder="Enter your 10 digit no."
                                     className="w-full bg-transparent border border-gray-400 rounded-md py-2 pl-2 pr-4 text-primary"
                                 />
                             </div>
@@ -400,7 +403,7 @@ const Home = () => {
                                     <FaLocationDot size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    KH No.435, Gali No.2, Village Basai, Gurugram, Haryana 122001
+                                    Plot No.2 Aanand Residence, Laxman Vihar, Phase -2 Gurgaon HR 122001
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -408,7 +411,15 @@ const Home = () => {
                                     <FaPhoneAlt size={20} />
                                 </div>
                                 <p className="text-textSecondary text-base font-normal leading-relaxed">
-                                    +91 9873653629
+                                    +91 7011922762
+                                </p>
+                            </div>
+                            <div className="flex justify-center items-center gap-2">
+                                <div className="p-2 bg-white rounded-full text-textPrimary shadow-md">
+                                    <FaPhoneVolume size={20} />
+                                </div>
+                                <p className="text-textSecondary text-base font-normal leading-relaxed">
+                                    0124 - 2252630
                                 </p>
                             </div>
                             <div className="flex justify-center items-center gap-2">
@@ -437,6 +448,7 @@ const Home = () => {
 
 export default Home;
 
+// Rest of your component code remains the same...
 interface PanelProps {
     open: number;
     setOpen: Dispatch<SetStateAction<number>>;

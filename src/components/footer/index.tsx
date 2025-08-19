@@ -16,7 +16,7 @@ export const Footer = () => {
     }
     return (
         <div className="bg-secondary">
-            <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+            <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-2">
                 <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-2">
                     <div className="md:max-w-md lg:col-span-1">
                         <a
@@ -129,22 +129,33 @@ export const Footer = () => {
                             <div className="flex">
                                 <p className="mr-1 text-white">Phone:</p>
                                 <a
-                                    href="tel:+919873653629"
+                                    href="tel:+917011922762"
                                     aria-label="Our phone"
                                     title="Our phone"
-                                    className="transition-colors duration-300 text-white/80"
+                                    className="transition-colors duration-300 text-white/80 wrap-anywhere"
                                 >
-                                    +91 9873653629
+                                    +91 7011922762
                                 </a>
                             </div>
                             <div className="flex">
-                                <p className="mr-1 text-white">Email:</p>
+                                <p className="mr-1 text-white">Landline :</p>
+                                <a
+                                    href="tel:+01242252630"
+                                    aria-label="Our phone"
+                                    title="Our phone"
+                                    className="transition-colors duration-300 text-white/80 wrap-anywhere"
+                                >
+                                    0124 - 2252630
+                                </a>
+                            </div>
+                            <div className="">
                                 <a
                                     href="mailto:info@viklangkendra.org"
                                     aria-label="Our email"
                                     title="Our email"
-                                    className="transition-colors duration-300 text-white/80"
+                                    className="transition-colors duration-300 text-white/80 wrap-normal"
                                 >
+                                    <span className="text-white">Email : </span>
                                     info@viklangkendra.org
                                 </a>
                             </div>
@@ -158,7 +169,7 @@ export const Footer = () => {
                                     className="transition-colors duration-300 text-white/80"
                                 >
                                     <span className='text-white'>Address : </span>
-                                    KH No.435, Gali No.2, Village Basai, Gurugram, Haryana 122001
+                                    Plot No.2 Aanand Residence, Laxman Vihar, Phase -2 Gurgaon HR 122001
                                 </a>
                             </div>
                             <div>

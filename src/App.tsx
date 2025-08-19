@@ -13,7 +13,9 @@ import { FaYoutube } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import ScrollToTop from "./components/ScrollToTop";
+import { useState } from "react";
 const App = () => {
+  const [showDonatePopupp, setShowDonatePopupp] = useState(false);
   return (
     <div className="bg-white">
       <BrowserRouter>
@@ -32,9 +34,9 @@ const App = () => {
             </a>
           </div>
         </div>
-        <Navbar />
+        <Navbar setShowDonatePopupp={setShowDonatePopupp} />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home showDonatePopupp={showDonatePopupp} setShowDonatePopupp={setShowDonatePopupp}/>} />
           <Route path='/about-us' element={<AboutUsPage />} />
           <Route path='/causes' element={<CausesPage />} />
           <Route path='/gallery' element={<GalleryPage />} />

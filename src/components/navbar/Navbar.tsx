@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 import MobileNavbar from '../mobile-navbar/MobileNavbar';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ setShowDonatePopupp }) => {
     const [openMenu, setOpenMenu] = useState(false);
 
     const toggleMenu = () => {
@@ -28,7 +28,7 @@ const Navbar = () => {
 
     return (
         <>
-            <MobileNavbar isOpen={openMenu} toggleMenu={toggleMenu} />
+            <MobileNavbar isOpen={openMenu} toggleMenu={toggleMenu} setShowDonatePopupp={setShowDonatePopupp}/>
 
             <nav className='nav-wrapper'>
                 <div className='nav-content'>
@@ -54,6 +54,13 @@ const Navbar = () => {
                         <li>
                             <Link className='menu-item' to="/contact" onClick={handleLinkClick}>Contact</Link>
                         </li>
+                        <button
+                            onClick={() => setShowDonatePopupp(true)}  // Fixed: Changed from setShowDonatePopup to setShowDonatePopupp
+                            data-ripple-light="true" 
+                            type="button" 
+                            className="select-none rounded-lg bg-secondary py-3 px-8 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer md:ms-5">
+                            Donate Now
+                        </button>
                     </ul>
 
                     <button className='menu-btn' onClick={toggleMenu}>

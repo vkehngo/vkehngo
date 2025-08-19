@@ -3,7 +3,7 @@ import './mobileNav.css';
 import logo from '/logo.webp';
 
 // @ts-ignore
-const MobileNavbar = ({ isOpen, toggleMenu }) => {
+const MobileNavbar = ({ isOpen, toggleMenu , setShowDonatePopupp  }) => {
 
     // Function to scroll to top
     const scrollToTop = () => {
@@ -43,6 +43,11 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
                     <li>
                         <Link className='menu-item' to="/contact" onClick={handleLinkClick}>Contact</Link>
                     </li>
+                    <button
+                            onClick={() => setShowDonatePopupp(true)}
+                            data-ripple-light="true" type="button" className="select-none rounded-lg bg-secondary py-3 px-8 text-center align-middle text-sm font-semibold uppercase text-white shadow-md shadow-secondary/20 transition-all hover:shadow-lg hover:shadow-secondary/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:opacity-50 disabled:shadow-none cursor-pointer">
+                            Donate Now
+                        </button>
                 </ul>
             </div>
         </div>
