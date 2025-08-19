@@ -1,3 +1,4 @@
+// @ts-ignore
 import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -21,6 +22,7 @@ import TextType from "../../components/ui/TextType";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// @ts-ignore
 const Home = ({ showDonatePopupp, setShowDonatePopupp }) => {
     const [loading, setLoading] = useState<boolean>(false);
     const formRef = useRef<HTMLFormElement>(null);
